@@ -2,7 +2,7 @@ language: objective-c
 osx_image: xcode7.3
 
 script:
-- xcodebuild clean build test -project Lootbox-Api-Wrapper.xcodeproj -scheme Lootbox-Api-WrapperTests GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
+- xcodebuild clean build test -project Lootbox-Api-Wrapper.xcodeproj -scheme Lootbox-Api-WrapperTests GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
 
 after_success:
 - bash <(curl -s https://codecov.io/bash)
