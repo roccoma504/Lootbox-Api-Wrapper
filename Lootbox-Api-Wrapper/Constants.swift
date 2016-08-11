@@ -18,12 +18,54 @@ let TANK_HEROES = ["D.Va","Reinhardt","Roadhog","Winston","Zarya"]
 let SUPPORT_HEROES = ["Ana","Lucio","Mercy","Symmetra","Zenyatta"]
 
 /**
+ Defines the enumeration of possible game types
+ 
+ - quick:
+ - competitive:
+ */
+enum ModeType : String {
+    case quick = "quick-play"
+    case competitive = "competitive-play"
+}
+
+/**
+ Defines the enumeration of possible platforms
+ 
+ - psn: Playstation Network
+ - xbl: Xbox Live
+ - pc: Playstation
+ */
+enum PlatformType : String {
+    case psn = "psn"
+    case xbl = "xbl"
+    case pc = "pc"
+}
+
+/**
+ Defines the enumertion of possible regions
+ 
+ - eu:     Europe
+ - us:     United States
+ - kr:     Korea
+ - cn:     Canada
+ - global: Global
+ */
+enum RegionType : String {
+    case eu = "eu"
+    case us = "us"
+    case kr = "kr"
+    case cn = "cn"
+    case global = "global"
+}
+
+
+/**
  Defines the enumeration of possible heroes
  
  - Ana:
  - Bastion:
  - Dva:
- - Genji:      
+ - Genji:
  - Hanzo:
  - Lucio:
  - Mccree:

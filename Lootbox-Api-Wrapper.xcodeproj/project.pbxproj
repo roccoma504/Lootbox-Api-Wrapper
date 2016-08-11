@@ -16,6 +16,7 @@
 		39559F6F1D5CACFE00905B02 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39559F6C1D5CACFE00905B02 /* Constants.swift */; };
 		39559F701D5CACFE00905B02 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39559F6D1D5CACFE00905B02 /* Extensions.swift */; };
 		39559F711D5CACFE00905B02 /* URLUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39559F6E1D5CACFE00905B02 /* URLUtilities.swift */; };
+		39559F761D5CC6B900905B02 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39559F751D5CC6B900905B02 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		39559F6C1D5CACFE00905B02 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		39559F6D1D5CACFE00905B02 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		39559F6E1D5CACFE00905B02 /* URLUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLUtilities.swift; sourceTree = "<group>"; };
+		39559F751D5CC6B900905B02 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				39559F531D5CACA200905B02 /* Assets.xcassets */,
 				39559F551D5CACA200905B02 /* LaunchScreen.storyboard */,
 				39559F501D5CACA200905B02 /* Main.storyboard */,
+				39559F751D5CC6B900905B02 /* User.swift */,
 			);
 			path = "Lootbox-Api-Wrapper";
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			files = (
 				39559F4F1D5CACA200905B02 /* ViewController.swift in Sources */,
 				39559F4D1D5CACA200905B02 /* AppDelegate.swift in Sources */,
+				39559F761D5CC6B900905B02 /* User.swift in Sources */,
 				39559F6F1D5CACFE00905B02 /* Constants.swift in Sources */,
 				39559F701D5CACFE00905B02 /* Extensions.swift in Sources */,
 				39559F711D5CACFE00905B02 /* URLUtilities.swift in Sources */,

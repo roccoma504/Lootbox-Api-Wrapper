@@ -12,7 +12,6 @@ import UIKit
 
 class URLUtilities {
     
-    
     /**
      Replaces the users region with global is platform is XBL.
      
@@ -33,47 +32,36 @@ class URLUtilities {
     }
     
     static func achievementsURL (userID : String,
-                                 platform : String,
-                                 region : String) -> NSURL {
-        return NSURL(string :(BASE_URL)+"/"+(platform)+"/"+(fixXBL(platform, region: region))+"/"+(userID.replaceHash())+"/achievements")!
+                                 platform : PlatformType,
+                                 region : RegionType) -> NSURL {
+        return NSURL(string :(BASE_URL)+"/"+(platform.rawValue)+"/"+(fixXBL(platform.rawValue, region: region.rawValue))+"/"+(userID.replaceHash())+"/achievements")!
     }
     
     static func profileURL(userID : String,
-                           platform : String,
-                           region : String) -> NSURL {
-        return NSURL(string : (BASE_URL)+"/"+(platform)+"/"+(fixXBL(platform, region: region))+"/"+(userID.replaceHash())+"/profile")!
+                           platform : PlatformType,
+                           region : RegionType) -> NSURL {
+        return NSURL(string : (BASE_URL)+"/"+(platform.rawValue)+"/"+(fixXBL(platform.rawValue, region: region.rawValue))+"/"+(userID.replaceHash())+"/profile")!
     }
     
-    static func quickPlayAllHeroesURL(userID : String,
-                                      platform : String,
-                                      region : String) -> NSURL {
-        return NSURL(string : (BASE_URL)+"/"+(platform)+"/"+(fixXBL(platform, region: region))+"/"+(userID.replaceHash())+"/quick-play/allHeroes/")!
-    }
-    
-    static func compPlayAllHeroesURL(platform : String,
-                                     region : String,
-                                     userID : String) -> NSURL {
-        return NSURL(string :(BASE_URL)+"/"+(platform)+"/"+(fixXBL(platform, region: region))+"/"+(userID.replaceHash())+"/competitive-play/allHeroes/")!
+    static func allHeroesURL(userID : String,
+                            platform : PlatformType,
+                             region : RegionType,
+                             mode : ModeType) -> NSURL {
+        return NSURL(string :(BASE_URL)+"/"+(platform.rawValue)+"/"+(fixXBL(platform.rawValue, region: region.rawValue))+"/"+(userID.replaceHash())+(mode.rawValue)+"/allHeroes/")!
     }
     
     static func quickHeroesURL(userID : String,
-                               platform : String,
-                               region : String,
+                               platform : PlatformType,
+                               region : RegionType,
+                               mode : ModeType,
                                hero : Heroes) -> NSURL {
-        return NSURL(string :(BASE_URL)+"/"+(platform)+"/"+(fixXBL(platform, region: region))+"/"+(userID.replaceHash())+"/quick-play/hero"+"/"+hero.rawValue+"/")!
-    }
-    
-    static func compHeroesURL(userID : String,
-                              platform : String,
-                              region : String,
-                              hero : Heroes) -> NSURL {
-        return NSURL(string :(BASE_URL)+"/"+(platform)+"/"+(fixXBL(platform, region: region))+"/"+(userID.replaceHash())+"/competitive-play/hero"+"/"+hero.rawValue+"/")!
+        return NSURL(string :(BASE_URL)+"/"+(platform.rawValue)+"/"+(fixXBL(platform.rawValue, region: region.rawValue))+"/"+(userID.replaceHash())+(mode.rawValue)+"/"+hero.rawValue+"/")!
     }
     
     static func allHerosURL(userID : String,
-                            platform : String,
-                            region : String) -> NSURL {
-        return NSURL(string :(BASE_URL)+"/"+(platform)+"/"+(fixXBL(platform, region: region))+"/"+(userID.replaceHash())+"/heroes")!
+                            platform : PlatformType,
+                            region : RegionType) -> NSURL {
+        return NSURL(string :(BASE_URL)+"/"+(platform.rawValue)+"/"+(fixXBL(platform.rawValue, region: region.rawValue))+"/"+(userID.replaceHash())+"/heroes")!
     }
     
     
