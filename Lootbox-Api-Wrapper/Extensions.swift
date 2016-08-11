@@ -65,19 +65,7 @@ extension String {
     func removeColon() -> String {
         return self.replace(":", replacement: "")
     }
-    
-    func replaceHeroes() -> String {
-        let badHeroNames = ["Soldier 76","Torbjorn","D.Va"]
-        let fixedHeroesName = ["Soldier76","Torbjoern","DVa"]
-        
-        if badHeroNames.contains(self) {
-            return fixedHeroesName[badHeroNames.indexOf(self)!]
-        }
-        else {
-            return self
-        }
-    }
-    
+
     /**
      Inserts a string into an already established string
      
