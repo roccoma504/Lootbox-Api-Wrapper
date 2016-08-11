@@ -12,7 +12,16 @@ import UIKit
 
 class URLUtilities {
     
-    
+    /**
+     Replaces the users region with global is platform is XBL.
+     
+     This is needed as a patch for the API
+     
+     - parameter platform: The users platform
+     - parameter region:   The users region
+     
+     - returns: If XBL -> "global" else self
+     */
     private static func fixXBL(platform : String, region : String) -> String {
         if platform == "xbl" {
             return "global"
@@ -22,29 +31,39 @@ class URLUtilities {
         }
     }
     
-    static func profileURL(platform : String, region : String, userID : String) -> NSURL {
-        return NSURL(string : (BASE_URL)+"/"+(platform)+"/"+(fixXBL(platform, region: region))+"/"+(userID.replaceHash())+"/profile")!
+    static func achievementsURL (userID   : String,
+                                 platform : PlatformType,
+                                 region   : RegionType) -> NSURL {
+        return NSURL(string :(BASE_URL)+"/"+(platform.rawValue)+"/"+(fixXBL(platform.rawValue, region: region.rawValue))+"/"+(userID.replaceHash())+"/achievements")!
     }
     
-    static func allHero(platform : String, region : String, userID : String) -> NSURL {
-        return NSURL(string :(BASE_URL)+"/"+(platform)+"/"+(fixXBL(platform, region: region))+"/"+(userID.replaceHash())+"/heroes")!
+    static func profileURL(userID   : String,
+                           platform : PlatformType,
+                           region   : RegionType) -> NSURL {
+        return NSURL(string : (BASE_URL)+"/"+(platform.rawValue)+"/"+(fixXBL(platform.rawValue, region: region.rawValue))+"/"+(userID.replaceHash())+"/profile")!
     }
     
-    static func quickHeroesURL(platform : String, region : String, userID : String, hero : Heroes) -> NSURL {
-        return NSURL(string :(BASE_URL)+"/"+(platform)+"/"+(fixXBL(platform, region: region))+"/"+(userID.replaceHash())+"/quick-play/hero"+"/"+String(hero).replaceHeroes()+"/")!
+    static func allHeroesURL(userID  : String,
+                            platform : PlatformType,
+                             region  : RegionType,
+                             mode : ModeType) -> NSURL {
+        return NSURL(string :(BASE_URL)+"/"+(platform.rawValue)+"/"+(fixXBL(platform.rawValue, region: region.rawValue))+"/"+(userID.replaceHash())+(mode.rawValue)+"/allHeroes/")!
     }
     
-    static func compHeroesURL(platform : String, region : String, userID : String, hero : Heroes) -> NSURL {
-        return NSURL(string :(BASE_URL)+"/"+(platform)+"/"+(fixXBL(platform, region: region))+"/"+(userID.replaceHash())+"/competitive-play/hero"+"/"+String(hero).replaceHeroes()+"/")!
+    static func quickHeroesURL(userID   : String,
+                               platform : PlatformType,
+                               region   : RegionType,
+                               mode     : ModeType,
+                               hero     : Heroes) -> NSURL {
+        return NSURL(string :(BASE_URL)+"/"+(platform.rawValue)+"/"+(fixXBL(platform.rawValue, region: region.rawValue))+"/"+(userID.replaceHash())+(mode.rawValue)+"/"+hero.rawValue+"/")!
     }
     
-    static func quickPlayURL(platform : String, region : String, userID : String) -> NSURL {
-        return NSURL(string : (BASE_URL)+"/"+(platform)+"/"+(fixXBL(platform, region: region))+"/"+(userID.replaceHash())+"/quick-play/allHeroes/")!
+    static func allHerosURL(userID   : String,
+                            platform : PlatformType,
+                            region   : RegionType) -> NSURL {
+        return NSURL(string :(BASE_URL)+"/"+(platform.rawValue)+"/"+(fixXBL(platform.rawValue, region: region.rawValue))+"/"+(userID.replaceHash())+"/heroes")!
     }
     
-    static func compPlayURL(platform : String, region : String, userID : String) -> NSURL {
-        return NSURL(string :(BASE_URL)+"/"+(platform)+"/"+(fixXBL(platform, region: region))+"/"+(userID.replaceHash())+"/competitive-play/allHeroes/")!
-    }
     
 }
 
