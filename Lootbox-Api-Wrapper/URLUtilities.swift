@@ -43,27 +43,37 @@ class URLUtilities {
         return NSURL(string : (BASE_URL)+"/"+(platform.rawValue)+"/"+(fixXBL(platform.rawValue, region: region.rawValue))+"/"+(userID.replaceHash())+"/profile")!
     }
     
-    static func allHeroesURL(userID  : String,
-                            platform : PlatformType,
-                             region  : RegionType,
-                             mode : ModeType) -> NSURL {
-        return NSURL(string :(BASE_URL)+"/"+(platform.rawValue)+"/"+(fixXBL(platform.rawValue, region: region.rawValue))+"/"+(userID.replaceHash())+(mode.rawValue)+"/allHeroes/")!
+    static func allHeroesURL(userID   : String,
+                             platform : PlatformType,
+                             region   : RegionType,
+                             mode     : ModeType) -> NSURL {
+        
+        let modeString = mode.rawValue
+        let regionString = region.rawValue
+        let platformString = platform.rawValue
+        
+        return NSURL(string :(BASE_URL)+"/"+(platformString+"/")+(fixXBL(platformString, region: regionString)+"/")+(userID.replaceHash()+"/")+(modeString + "/")+"allHeroes")!
     }
     
-    static func quickHeroesURL(userID   : String,
-                               platform : PlatformType,
-                               region   : RegionType,
-                               mode     : ModeType,
-                               hero     : Heroes) -> NSURL {
-        return NSURL(string :(BASE_URL)+"/"+(platform.rawValue)+"/"+(fixXBL(platform.rawValue, region: region.rawValue))+"/"+(userID.replaceHash())+(mode.rawValue)+"/"+hero.rawValue+"/")!
+    static func heroURL(userID   : String,
+                        platform : PlatformType,
+                        region   : RegionType,
+                        mode     : ModeType,
+                        hero     : Heroes) -> NSURL {
+        
+        let modeString = mode.rawValue
+        let regionString = region.rawValue
+        let platformString = platform.rawValue
+        let heroString = hero.rawValue
+        
+        return NSURL(string :(BASE_URL)+"/"+(platformString+"/")+(fixXBL(platformString, region: regionString)+"/")+(userID.replaceHash()+"/")+(modeString + "/")+heroString)!
     }
     
-    static func allHerosURL(userID   : String,
-                            platform : PlatformType,
-                            region   : RegionType) -> NSURL {
-        return NSURL(string :(BASE_URL)+"/"+(platform.rawValue)+"/"+(fixXBL(platform.rawValue, region: region.rawValue))+"/"+(userID.replaceHash())+"/heroes")!
+    static func heroesURL(userID   : String,
+                          platform : PlatformType,
+                          region   : RegionType) -> NSURL {
+        return NSURL(string :(BASE_URL)+"/"+(platform.rawValue)+"/"+(fixXBL(platform.rawValue, region: region.rawValue))+"/"+(userID.replaceHash()+"/")+"heroes")!
     }
-    
     
 }
 

@@ -8,15 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		39559F4D1D5CACA200905B02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39559F4C1D5CACA200905B02 /* AppDelegate.swift */; };
-		39559F4F1D5CACA200905B02 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39559F4E1D5CACA200905B02 /* ViewController.swift */; };
-		39559F521D5CACA200905B02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39559F501D5CACA200905B02 /* Main.storyboard */; };
 		39559F541D5CACA200905B02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39559F531D5CACA200905B02 /* Assets.xcassets */; };
-		39559F571D5CACA200905B02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39559F551D5CACA200905B02 /* LaunchScreen.storyboard */; };
-		39559F621D5CACA200905B02 /* Lootbox_Api_WrapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39559F611D5CACA200905B02 /* Lootbox_Api_WrapperTests.swift */; };
+		39559F621D5CACA200905B02 /* ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39559F611D5CACA200905B02 /* ExtensionsTests.swift */; };
 		39559F6F1D5CACFE00905B02 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39559F6C1D5CACFE00905B02 /* Constants.swift */; };
 		39559F701D5CACFE00905B02 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39559F6D1D5CACFE00905B02 /* Extensions.swift */; };
 		39559F711D5CACFE00905B02 /* URLUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39559F6E1D5CACFE00905B02 /* URLUtilities.swift */; };
 		39559F761D5CC6B900905B02 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39559F751D5CC6B900905B02 /* User.swift */; };
+		39DB24A31D5CDE3700E40F66 /* URLUtilitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DB24A21D5CDE3700E40F66 /* URLUtilitiesTests.swift */; };
+		39E739B91D5CEE2D0028CF39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39E739B81D5CEE2D0028CF39 /* Main.storyboard */; };
+		39E739BA1D5CEE2D0028CF39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39E739B81D5CEE2D0028CF39 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,18 +32,17 @@
 /* Begin PBXFileReference section */
 		39559F491D5CACA200905B02 /* Lootbox-Api-Wrapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lootbox-Api-Wrapper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		39559F4C1D5CACA200905B02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		39559F4E1D5CACA200905B02 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		39559F511D5CACA200905B02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		39559F531D5CACA200905B02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		39559F561D5CACA200905B02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		39559F581D5CACA200905B02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39559F5D1D5CACA200905B02 /* Lootbox-Api-WrapperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lootbox-Api-WrapperTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		39559F611D5CACA200905B02 /* Lootbox_Api_WrapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lootbox_Api_WrapperTests.swift; sourceTree = "<group>"; };
+		39559F611D5CACA200905B02 /* ExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsTests.swift; sourceTree = "<group>"; };
 		39559F631D5CACA200905B02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39559F6C1D5CACFE00905B02 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		39559F6D1D5CACFE00905B02 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		39559F6E1D5CACFE00905B02 /* URLUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLUtilities.swift; sourceTree = "<group>"; };
 		39559F751D5CC6B900905B02 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		39DB24A21D5CDE3700E40F66 /* URLUtilitiesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLUtilitiesTests.swift; sourceTree = "<group>"; };
+		39E739B81D5CEE2D0028CF39 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,13 +85,11 @@
 			isa = PBXGroup;
 			children = (
 				39559F581D5CACA200905B02 /* Info.plist */,
+				39E739B81D5CEE2D0028CF39 /* Main.storyboard */,
 				39559F4C1D5CACA200905B02 /* AppDelegate.swift */,
-				39559F741D5CC08700905B02 /* Utilities */,
-				39559F4E1D5CACA200905B02 /* ViewController.swift */,
-				39559F531D5CACA200905B02 /* Assets.xcassets */,
-				39559F551D5CACA200905B02 /* LaunchScreen.storyboard */,
-				39559F501D5CACA200905B02 /* Main.storyboard */,
 				39559F751D5CC6B900905B02 /* User.swift */,
+				39559F531D5CACA200905B02 /* Assets.xcassets */,
+				39559F741D5CC08700905B02 /* Utilities */,
 			);
 			path = "Lootbox-Api-Wrapper";
 			sourceTree = "<group>";
@@ -100,8 +97,9 @@
 		39559F601D5CACA200905B02 /* Lootbox-Api-WrapperTests */ = {
 			isa = PBXGroup;
 			children = (
-				39559F611D5CACA200905B02 /* Lootbox_Api_WrapperTests.swift */,
 				39559F631D5CACA200905B02 /* Info.plist */,
+				39559F611D5CACA200905B02 /* ExtensionsTests.swift */,
+				39DB24A21D5CDE3700E40F66 /* URLUtilitiesTests.swift */,
 			);
 			path = "Lootbox-Api-WrapperTests";
 			sourceTree = "<group>";
@@ -198,9 +196,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39559F571D5CACA200905B02 /* LaunchScreen.storyboard in Resources */,
 				39559F541D5CACA200905B02 /* Assets.xcassets in Resources */,
-				39559F521D5CACA200905B02 /* Main.storyboard in Resources */,
+				39E739B91D5CEE2D0028CF39 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +205,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39E739BA1D5CEE2D0028CF39 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,7 +216,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39559F4F1D5CACA200905B02 /* ViewController.swift in Sources */,
 				39559F4D1D5CACA200905B02 /* AppDelegate.swift in Sources */,
 				39559F761D5CC6B900905B02 /* User.swift in Sources */,
 				39559F6F1D5CACFE00905B02 /* Constants.swift in Sources */,
@@ -231,7 +228,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39559F621D5CACA200905B02 /* Lootbox_Api_WrapperTests.swift in Sources */,
+				39DB24A31D5CDE3700E40F66 /* URLUtilitiesTests.swift in Sources */,
+				39559F621D5CACA200905B02 /* ExtensionsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,25 +242,6 @@
 			targetProxy = 39559F5E1D5CACA200905B02 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		39559F501D5CACA200905B02 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				39559F511D5CACA200905B02 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		39559F551D5CACA200905B02 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				39559F561D5CACA200905B02 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		39559F641D5CACA200905B02 /* Debug */ = {
@@ -415,6 +394,7 @@
 				39559F681D5CACA200905B02 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		39559F691D5CACA200905B02 /* Build configuration list for PBXNativeTarget "Lootbox-Api-WrapperTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +403,7 @@
 				39559F6B1D5CACA200905B02 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
