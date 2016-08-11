@@ -15,6 +15,8 @@
 		39559F711D5CACFE00905B02 /* URLUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39559F6E1D5CACFE00905B02 /* URLUtilities.swift */; };
 		39559F761D5CC6B900905B02 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39559F751D5CC6B900905B02 /* User.swift */; };
 		39DB24A31D5CDE3700E40F66 /* URLUtilitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DB24A21D5CDE3700E40F66 /* URLUtilitiesTests.swift */; };
+		39E739B91D5CEE2D0028CF39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39E739B81D5CEE2D0028CF39 /* Main.storyboard */; };
+		39E739BA1D5CEE2D0028CF39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39E739B81D5CEE2D0028CF39 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,7 @@
 		39559F6E1D5CACFE00905B02 /* URLUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLUtilities.swift; sourceTree = "<group>"; };
 		39559F751D5CC6B900905B02 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		39DB24A21D5CDE3700E40F66 /* URLUtilitiesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLUtilitiesTests.swift; sourceTree = "<group>"; };
+		39E739B81D5CEE2D0028CF39 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,10 +85,11 @@
 			isa = PBXGroup;
 			children = (
 				39559F581D5CACA200905B02 /* Info.plist */,
+				39E739B81D5CEE2D0028CF39 /* Main.storyboard */,
 				39559F4C1D5CACA200905B02 /* AppDelegate.swift */,
-				39559F741D5CC08700905B02 /* Utilities */,
-				39559F531D5CACA200905B02 /* Assets.xcassets */,
 				39559F751D5CC6B900905B02 /* User.swift */,
+				39559F531D5CACA200905B02 /* Assets.xcassets */,
+				39559F741D5CC08700905B02 /* Utilities */,
 			);
 			path = "Lootbox-Api-Wrapper";
 			sourceTree = "<group>";
@@ -193,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				39559F541D5CACA200905B02 /* Assets.xcassets in Resources */,
+				39E739B91D5CEE2D0028CF39 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +205,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39E739BA1D5CEE2D0028CF39 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
