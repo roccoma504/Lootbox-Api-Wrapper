@@ -19,7 +19,7 @@ class Lootbox_Api_WrapperTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func numberTests() {
         let one = "1"
         let ten = "10"
         let thousand = "1000"
