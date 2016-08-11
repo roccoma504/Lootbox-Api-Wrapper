@@ -13,6 +13,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let userID = "roclobster504"
+        let platform : PlatformType = .psn
+        let region : RegionType = .us
+        
+        var rURL = String(URLUtilities.heroURL(userID, platform: platform, region: region,mode: .competitive,hero: .Hanzo))
+        var compURL = "https://api.lootbox.eu/psn/us/roclobster504/competitive-play/hanzo"
+        print(rURL)
+        print (compURL)
     }
 
     override func didReceiveMemoryWarning() {

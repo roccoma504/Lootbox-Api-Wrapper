@@ -9,10 +9,11 @@
 import XCTest
 @testable import Lootbox_Api_Wrapper
 
-class Lootbox_Api_WrapperTests: XCTestCase {
+class ExtensionsTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
+        numberTests()
     }
     
     override func tearDown() {
