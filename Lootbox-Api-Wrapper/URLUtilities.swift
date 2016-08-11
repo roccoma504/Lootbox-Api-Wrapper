@@ -34,8 +34,8 @@ class URLUtilities {
         return NSURL(string :(BASE_URL)+"/"+(platform)+"/"+(fixXBL(platform, region: region))+"/"+(userID.replaceHash())+"/quick-play/hero"+"/"+String(hero).replaceHeroes()+"/")!
     }
     
-    static func compHeroesURL(platform : String, region : String, userID : String, hero : String) -> NSURL {
-        return NSURL(string :(BASE_URL)+"/"+(platform)+"/"+(fixXBL(platform, region: region))+"/"+(userID.replaceHash())+"/competitive-play/hero"+"/"+hero.replaceHeroes()+"/")!
+    static func compHeroesURL(platform : String, region : String, userID : String, hero : Heroes) -> NSURL {
+        return NSURL(string :(BASE_URL)+"/"+(platform)+"/"+(fixXBL(platform, region: region))+"/"+(userID.replaceHash())+"/competitive-play/hero"+"/"+String(hero).replaceHeroes()+"/")!
     }
     
     static func quickPlayURL(platform : String, region : String, userID : String) -> NSURL {

@@ -37,6 +37,7 @@ class Lootbox_Api_WrapperTests: XCTestCase {
         XCTAssertEqual(billion.addComma(), "1,000,000,000")
     }
     
+    
     func testPerformanceExample() {
         self.measureBlock {
         }
