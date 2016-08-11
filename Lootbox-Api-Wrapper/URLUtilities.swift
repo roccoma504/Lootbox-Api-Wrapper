@@ -75,6 +75,5 @@ class URLUtilities {
         return NSURL(string :(BASE_URL)+"/"+(platform.rawValue)+"/"+(fixXBL(platform.rawValue, region: region.rawValue))+"/"+(userID.replaceHash()+"/")+"heroes")!
     }
     
-    
 }
 

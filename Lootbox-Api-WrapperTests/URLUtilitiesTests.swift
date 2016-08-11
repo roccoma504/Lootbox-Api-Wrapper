@@ -21,6 +21,7 @@ class URLUtilitiesTest: XCTestCase {
         profileURL()
         allHeroesURL()
         heroURL()
+        heroesURL()
     }
     
     override func tearDown() {
@@ -61,6 +62,13 @@ class URLUtilitiesTest: XCTestCase {
         rURL = String(URLUtilities.heroURL(userID, platform: platform, region: region, mode: .quick, hero: .Hanzo))
         compURL = "https://api.lootbox.eu/psn/us/roclobster504/quick-play/Hanzo"
         XCTAssertTrue(rURL == compURL)
+    }
+    
+    func heroesURL() {
+        let rURL = String(URLUtilities.heroesURL(userID, platform: platform, region: region))
+        let compURL = "https://api.lootbox.eu/psn/us/roclobster504/heroes"
+        XCTAssertTrue(rURL == compURL)
+
     }
     
     func testPerformanceExample() {
