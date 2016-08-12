@@ -8,9 +8,9 @@ The Wrapper is built with Swift 2.3 and is a wrapper for the Lootbox API found h
 
 Goal of the Wrapper is to support Swift developers to retrieve OverWatch stats more easily. The wrapper provides data for the following
 
-  - User profile information including quick/competitive play (done)
-  - User stats cross all heroes including quick/competitive play (working)
-  - User stats by specific hero including quick/competitive play (on deck)
+# Classes and What They Do
+  - User: Provides account level information including level, wins, losses and games played for both quick and competitive play. 
+
 
 # Usage
 
