@@ -28,16 +28,16 @@ class UserTests: XCTestCase {
         let ID = "roclobster504"
         let region : RegionType = .us
         let platform : PlatformType = .psn
-        let exp = expectationWithDescription("\(#function)\(#line)")
+        //let exp = expectationWithDescription("\(#function)\(#line)")
         
-        user = User(ID: ID, platform: platform, region: region) { (success, error) in
-            XCTAssertTrue(success)
-            exp.fulfill()
+        //user = User(ID: ID, platform: platform, region: region) { (success, error) in
+        //    XCTAssertTrue(success)
+        //    exp.fulfill()
 
-            print(self.user)
-        }
+        //    print(self.user)
+       // }
         
-        waitForExpectationsWithTimeout(10, handler: nil)
+        //waitForExpectationsWithTimeout(10, handler: nil)
         
     }
     
