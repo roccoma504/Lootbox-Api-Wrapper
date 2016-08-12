@@ -21,49 +21,8 @@ extension String {
         return self.stringByReplacingOccurrencesOfString(string, withString: replacement, options: NSStringCompareOptions.LiteralSearch, range: nil)
     }
     
-    /**
-     Removes whitespace
-     
-     - returns: self, with whitespace removed
-     */
-    func removeWhitespace() -> String {
-        return self.replace(" ", replacement: "")
-    }
-    
-    /**
-     Removes commas
-     
-     - returns: self, with commas removed
-     */
-    func removeComma() -> String {
-        return self.replace(",", replacement: "")
-    }
-    
-    /**
-     Replaces hashes
-     
-     - returns: self, with hashes replaced with "-" for the API
-     */
-    func replaceHash() -> String {
-        return self.replace("#", replacement: "-")
-    }
-    
-    /**
-     Removes dashes
-     
-     - returns: self, with "-" removed
-     */
-    func removeDash() -> String {
-        return self.replace("-", replacement: " ")
-    }
-    
-    /**
-     Removes commas
-     
-     - returns: self, with commas removed
-     */
-    func removeColon() -> String {
-        return self.replace(":", replacement: "")
+    func replace(value : String, with : String = "") -> String {
+        return self.replace(value, replacement: with)
     }
 
     /**
