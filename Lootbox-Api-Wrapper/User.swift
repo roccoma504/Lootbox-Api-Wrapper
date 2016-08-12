@@ -62,8 +62,16 @@ class User: NSObject {
                 completion(success: false, error: error)
             }
             else {
-                self.json = json
-                completion(success: true, error: error)
+                
+                if json["error"] != nil {
+                    completion(success: false, error: NSError(domain: String(json["error"]), code: -1, userInfo: nil))
+                
+                }
+                else {
+                    self.json = json
+                    completion(success: true, error: error)
+                }
+
             }
         }
     }
