@@ -11,25 +11,34 @@ import XCTest
 
 class UserTests: XCTestCase {
     
+    var user : User!
+    
     override func setUp() {
         super.setUp()
-        create()
+        successfulCreate()
+        
     }
     
     override func tearDown() {
         super.tearDown()
     }
     
-    func create() {
+    func successfulCreate() {
         
-        let ID = "rocloster504"
+        let ID = "roclobster504"
         let region : RegionType = .us
         let platform : PlatformType = .psn
+        let exp = expectationWithDescription("\(#function)\(#line)")
         
-        let user = User(ID: ID, platform: platform, region: region) { (success, error) in
+        user = User(ID: ID, platform: platform, region: region) { (success, error) in
             XCTAssertTrue(success)
-        }
+            exp.fulfill()
 
+            print(self.user)
+        }
+        
+        waitForExpectationsWithTimeout(10, handler: nil)
+        
     }
     
     func testPerformanceExample() {
