@@ -14,6 +14,8 @@ class ExtensionsTests: XCTestCase {
     override func setUp() {
         super.setUp()
         numberTests()
+        removeWhiteSpace()
+        removeComma()
     }
     
     override func tearDown() {
@@ -38,6 +40,15 @@ class ExtensionsTests: XCTestCase {
         XCTAssertEqual(billion.addComma(), "1,000,000,000")
     }
     
+    func removeWhiteSpace() {
+        let string = "W O W"
+        XCTAssertEqual("WOW", string.replace(" "))
+    }
+    
+    func removeComma() {
+    let string = "Wow,"
+        XCTAssertEqual("Wow", string.replace(","))
+    }
     
     func testPerformanceExample() {
         self.measureBlock {
