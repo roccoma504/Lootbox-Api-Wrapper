@@ -17,22 +17,6 @@ class ViewViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("loaded")
-        
-        user = User(ID: "roclobster504", platform: .psn, region: .us, completion: { (success, error) in
-            if success {
-                self.printUser()
-            }
-        })
-        
-        allHeroes = AllHeroes(ID: "roclobster504", platform: .psn, region: .us, mode: .quick, completion: { (success, error) in
-                if success {
-                    self.printAllHeroes()
-                }
-        })
-        
-        hero = Hero(ID: "roclobster504", platform: .psn, region: .us, mode: .quick, hero: .Hanzo, completion: { (success, error) in })
-        // Do any additional setup after loading the view.
     }
     
 
