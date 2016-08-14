@@ -19,7 +19,7 @@ class AllHeroes: NSObject {
     enum ValueKind : String {
         case cards = "Cards"
         case damagaeDoneAverage = "DamageDone-Average"
-        case damageDoe = "DamageDone"
+        case damageDone = "DamageDone"
         case damageDoneMostInGame = "DamageDone-MostinGame"
         case deaths = "Deaths"
         case deathsAverage = "Deaths-Average"

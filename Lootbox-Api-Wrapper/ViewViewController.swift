@@ -19,13 +19,13 @@ class ViewViewController: UIViewController {
         
         user = User(ID: "roclobster504", platform: .psn, region: .us, completion: { (success, error) in
             if success {
-                self.printStuff()
+                self.printUser()
             }
         })
         
         allHeroes = AllHeroes(ID: "roclobster504", platform: .psn, region: .us, mode: .quick, completion: { (success, error) in
                 if success {
-                    self.printStuff()
+                    self.printAllHeroes()
                 }
         })
         
@@ -33,7 +33,8 @@ class ViewViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    private func printStuff() {
+    private func printUser() {
+        print("user")
         print(user.get(.name))
         print(user.get(.level))
         print(user.get(.rank))
@@ -49,6 +50,21 @@ class ViewViewController: UIViewController {
         print(user.get(.competitivePlayed))
         print(user.get(.competitivePlaytime))
         print(user.get(.avatar))
+    }
+    
+    private func printAllHeroes() {
+        print("all heroes")
+        print(allHeroes.get(.cards))
+        print(allHeroes.get(.damagaeDoneAverage))
+        print(allHeroes.get(. damageDone ))
+        print(allHeroes.get(.damageDoneMostInGame ))
+        print(allHeroes.get(.deaths ))
+        print(allHeroes.get(.deathsAverage ))
+        print(allHeroes.get(.defensiveAssistsAverage ))
+
+
+        
+
     }
     
     override func didReceiveMemoryWarning() {
