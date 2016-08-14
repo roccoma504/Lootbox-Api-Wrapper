@@ -69,8 +69,9 @@ class URLUtilities {
     
     static func heroesURL(userID: String,
                           platform: PlatformType,
-                          region: RegionType) -> NSURL {
-        return NSURL(string: (BaseUrl)+"/"+(platform.rawValue)+"/"+(fixXBL(platform.rawValue, region: region.rawValue))+"/"+(userID.replace("-", with:"-")+"/")+"heroes")!
+                          region: RegionType,
+                          mode: ModeType) -> NSURL {
+        return NSURL(string: (BaseUrl)+"/"+(platform.rawValue)+"/"+(fixXBL(platform.rawValue, region: region.rawValue))+"/"+(userID.replace("-", with:"-")+"/")+(mode.rawValue+"/")+"heroes")!
     }
     
 }

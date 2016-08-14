@@ -9,9 +9,16 @@
 import UIKit
 
 class ViewViewController: UIViewController {
+    var user : User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        user = User(ID: "roclbster504", platform: .Psn, region: .Us) { (success, error) in
+            print(success)
+            print(error)
+        }
+        
     }
     
     override func didReceiveMemoryWarning() {

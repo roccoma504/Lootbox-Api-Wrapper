@@ -65,8 +65,8 @@ class URLUtilitiesTest: XCTestCase {
     }
     
     func heroesURL() {
-        let rURL = String(URLUtilities.heroesURL(userID, platform: platform, region: region))
-        let compURL = "https://api.lootbox.eu/psn/us/roclobster504/heroes"
+        let rURL = String(URLUtilities.heroesURL(userID, platform: platform, region: region, mode: .Quick))
+        let compURL = "https://api.lootbox.eu/psn/us/roclobster504/quick-play/heroes"
         XCTAssertTrue(rURL == compURL)
 
     }

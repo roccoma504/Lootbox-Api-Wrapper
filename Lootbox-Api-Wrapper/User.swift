@@ -61,7 +61,7 @@ class User: NSObject {
             }
             else {
                 if json["error"] != nil {
-                    completion(success: false, error: NSError(domain: String(json["error"]), code: -1, userInfo: nil))
+                    //completion(success: false, error: NSError(domain: String(json["error"]), code: -1, userInfo: nil))
                 }
                 else {
                     self.json = json
@@ -70,7 +70,7 @@ class User: NSObject {
             }
         }
     }
-
+    
     /**
      Returns the specifified value.
      
