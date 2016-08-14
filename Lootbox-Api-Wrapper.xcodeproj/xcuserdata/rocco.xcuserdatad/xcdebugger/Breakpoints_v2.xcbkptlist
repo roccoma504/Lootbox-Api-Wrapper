@@ -35,5 +35,53 @@
             landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Lootbox-Api-WrapperTests/HeroTests.swift"
+            timestampString = "492899471.526591"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "successfulCreate()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Lootbox_Api_WrapperTests.HeroTests.(successfulCreate () -&gt; ()).(closure #1)"
+                  moduleName = "Lootbox-Api-WrapperTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rocco/Dropbox/Applications/Lootbox-Api-Wrapper/Lootbox-Api-WrapperTests/HeroTests.swift"
+                  timestampString = "492899512.213552"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "458">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Lootbox_Api_WrapperTests.HeroTests.(successfulCreate () -&gt; ()).(closure #1).(implicit closure #2)"
+                  moduleName = "Lootbox-Api-WrapperTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rocco/Dropbox/Applications/Lootbox-Api-Wrapper/Lootbox-Api-WrapperTests/HeroTests.swift"
+                  timestampString = "492899512.213846"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "62">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

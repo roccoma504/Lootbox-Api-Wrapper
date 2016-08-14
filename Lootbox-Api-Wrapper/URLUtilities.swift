@@ -63,8 +63,8 @@ class URLUtilities {
         let regionString = region.rawValue
         let platformString = platform.rawValue
         let heroString = hero.rawValue
-        
-        return NSURL(string: (BaseUrl)+"/"+(platformString+"/")+(fixXBL(platformString, region: regionString)+"/")+(userID.replace("-", with:"-")+"/")+(modeString + "/")+heroString)!
+                
+        return NSURL(string: (BaseUrl)+"/"+(platformString+"/")+(fixXBL(platformString, region: regionString)+"/")+(userID.replace("-", with:"-")+"/")+(modeString + "/hero/")+heroString+"/")!
     }
     
     static func heroesURL(userID: String,

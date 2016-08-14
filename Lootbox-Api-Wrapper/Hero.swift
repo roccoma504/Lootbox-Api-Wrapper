@@ -27,7 +27,7 @@ class Hero: NSObject {
         case DamageDoneMostInGame = "DamageDone-MostinGame"
         case DamageDoneMostInLife = "DamageDone-MostinLife"
         case Deaths = "Deaths"
-        case CeathsAverage = "Deaths-Average"
+        case DeathsAverage = "Deaths-Average"
         case Eliminations = "Eliminations"
         case EliminationsAverage = "Eliminations-Average"
         case ElminationsMostInGame = "Eliminations-MostinGame"
@@ -92,9 +92,10 @@ class Hero: NSObject {
             }
             else {
                 if json["error"] != nil {
-                    completion(success: false, error: NSError(domain: String(json["error"]), code: -1, userInfo: nil))
+                   // completion(success: false, error: NSError(domain: String(json["error"]), code: -1, userInfo: nil))
                 }
                 else {
+                    print(json)
                     self.json = json
                     completion(success: true, error: error)
                 }
