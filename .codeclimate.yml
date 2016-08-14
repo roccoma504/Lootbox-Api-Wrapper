@@ -1,12 +1,14 @@
-diff --git a/.codeclimate.yml b/.codeclimate.yml
-index e69de29..f3c2a9b 100644
---- a/.codeclimate.yml
-+++ b/.codeclimate.yml
-@@ -0,0 +1,7 @@
-+---
-+engines:
-+  fixme:
-+    enabled: true
-+ratings:
-+  paths: []
-+exclude_paths: []
+engines:
+  rubocop:
+    enabled: true
+  brakeman:
+    enabled: true
+  eslint:
+    enabled: true
+  csslint:
+    enabled: true
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - swift
