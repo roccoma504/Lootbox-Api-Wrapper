@@ -12,3 +12,11 @@ engines:
     config:
       languages:
       - swift
+      
+      engines:
+  tailor:
+    enabled: true
+
+ratings:
+  paths:
+  - "**.swift"
