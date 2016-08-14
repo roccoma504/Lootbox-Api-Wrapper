@@ -9,23 +9,9 @@
 import UIKit
 
 class ViewViewController: UIViewController {
-    var heroSuccess : Hero!
-    
-    
-    var ID = "roclobster504"
-    let platform = PlatformType.Psn
-    let region = RegionType.Us
-    let hero = Heroes.Hanzo
-    let mode = ModeType.Quick
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        heroSuccess = Hero(ID: ID, platform: platform, region: region, mode: mode, hero: hero) { (success, error) in
-            print(success)
-            print(error)
-
-            }
     }
     
     override func didReceiveMemoryWarning() {

@@ -63,8 +63,7 @@ class UserTests: XCTestCase {
         weak var exp = expectationWithDescription("\(#function)\(#line)")
         
         userFail = User(ID: ID, platform: platform, region: region) { (success, error) in
-           // XCTAssertFalse(success)
-
+            XCTAssertFalse(success)
             exp!.fulfill()
         }
         

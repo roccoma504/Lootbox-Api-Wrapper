@@ -92,8 +92,7 @@ class HeroTests: XCTestCase {
         weak var exp = expectationWithDescription("\(#function)\(#line)")
         
         heroFail = Hero(ID: ID, platform: platform, region: region, mode: mode, hero: hero) { (success, error) in
-            // XCTAssertFalse(success)
-            
+            XCTAssertFalse(success)
             exp!.fulfill()
         }
         

@@ -19,6 +19,7 @@
 		39E3BDE21D5FF186001B79C3 /* ViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E3BDE11D5FF186001B79C3 /* ViewViewController.swift */; };
 		39E3BDE81D6109BE001B79C3 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E3BDE71D6109BE001B79C3 /* UserTests.swift */; };
 		39E3BDEA1D6109DA001B79C3 /* HeroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E3BDE91D6109DA001B79C3 /* HeroTests.swift */; };
+		39E3BDEC1D610E99001B79C3 /* AllHeroesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E3BDEB1D610E99001B79C3 /* AllHeroesTests.swift */; };
 		39E739B91D5CEE2D0028CF39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39E739B81D5CEE2D0028CF39 /* Main.storyboard */; };
 		39E739BA1D5CEE2D0028CF39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39E739B81D5CEE2D0028CF39 /* Main.storyboard */; };
 		39E739BE1D5CF0170028CF39 /* JSONUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E739BD1D5CF0170028CF39 /* JSONUtilities.swift */; };
@@ -52,6 +53,7 @@
 		39E3BDE11D5FF186001B79C3 /* ViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewViewController.swift; sourceTree = "<group>"; };
 		39E3BDE71D6109BE001B79C3 /* UserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
 		39E3BDE91D6109DA001B79C3 /* HeroTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroTests.swift; sourceTree = "<group>"; };
+		39E3BDEB1D610E99001B79C3 /* AllHeroesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllHeroesTests.swift; sourceTree = "<group>"; };
 		39E739B81D5CEE2D0028CF39 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		39E739BD1D5CF0170028CF39 /* JSONUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONUtilities.swift; sourceTree = "<group>"; };
 		39E739BF1D5E7CE80028CF39 /* AllHeroes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllHeroes.swift; sourceTree = "<group>"; };
@@ -110,11 +112,12 @@
 		39559F601D5CACA200905B02 /* Lootbox-Api-WrapperTests */ = {
 			isa = PBXGroup;
 			children = (
-				39559F631D5CACA200905B02 /* Info.plist */,
+				39E3BDEB1D610E99001B79C3 /* AllHeroesTests.swift */,
 				39559F611D5CACA200905B02 /* ExtensionsTests.swift */,
+				39E3BDE91D6109DA001B79C3 /* HeroTests.swift */,
+				39559F631D5CACA200905B02 /* Info.plist */,
 				39DB24A21D5CDE3700E40F66 /* URLUtilitiesTests.swift */,
 				39E3BDE71D6109BE001B79C3 /* UserTests.swift */,
-				39E3BDE91D6109DA001B79C3 /* HeroTests.swift */,
 			);
 			path = "Lootbox-Api-WrapperTests";
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			files = (
 				39E3BDE81D6109BE001B79C3 /* UserTests.swift in Sources */,
 				39DB24A31D5CDE3700E40F66 /* URLUtilitiesTests.swift in Sources */,
+				39E3BDEC1D610E99001B79C3 /* AllHeroesTests.swift in Sources */,
 				39559F621D5CACA200905B02 /* ExtensionsTests.swift in Sources */,
 				39E3BDEA1D6109DA001B79C3 /* HeroTests.swift in Sources */,
 			);

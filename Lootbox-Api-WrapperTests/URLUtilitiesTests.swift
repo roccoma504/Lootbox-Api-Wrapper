@@ -46,11 +46,11 @@ class URLUtilitiesTest: XCTestCase {
     
     func allHeroesURL() {
         var rURL = String(URLUtilities.allHeroesURL(userID, platform: platform, region: region,mode: .Competitive))
-        var compURL = "https://api.lootbox.eu/psn/us/roclobster504/competitive-play/allHeroes"
+        var compURL = "https://api.lootbox.eu/psn/us/roclobster504/competitive-play/allHeroes/"
         XCTAssertTrue(rURL == compURL)
         
         rURL = String(URLUtilities.allHeroesURL(userID, platform: platform, region: region,mode: .Quick))
-        compURL = "https://api.lootbox.eu/psn/us/roclobster504/quick-play/allHeroes"
+        compURL = "https://api.lootbox.eu/psn/us/roclobster504/quick-play/allHeroes/"
         XCTAssertTrue(rURL == compURL)
     }
     

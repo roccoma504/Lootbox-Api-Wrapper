@@ -18,7 +18,7 @@ class AllHeroes: NSObject {
 
     enum ValueKind: String {
         case Cards = "Cards"
-        case DamagaeDoneAverage = "DamageDone-Average"
+        case DamageDoneAverage = "DamageDone-Average"
         case DamageDone = "DamageDone"
         case DamageDoneMostInGame = "DamageDone-MostinGame"
         case Deaths = "Deaths"
@@ -98,7 +98,7 @@ class AllHeroes: NSObject {
             }
             else {
                 if json["error"] != nil {
-                    completion(success: false, error: NSError(domain: String(json["error"]), code: -1, userInfo: nil))
+                   // completion(success: false, error: NSError(domain: String(json["error"]), code: -1, userInfo: nil))
                 }
                 else {
                     self.json = json
