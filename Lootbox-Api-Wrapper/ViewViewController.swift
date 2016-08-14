@@ -12,6 +12,8 @@ class ViewViewController: UIViewController {
     
     var user : User!
     var allHeroes : AllHeroes!
+    var hero : Hero!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,43 +31,11 @@ class ViewViewController: UIViewController {
                 }
         })
         
-        
+        hero = Hero(ID: "roclobster504", platform: .psn, region: .us, mode: .quick, hero: .Hanzo, completion: { (success, error) in })
         // Do any additional setup after loading the view.
     }
     
-    private func printUser() {
-        print("user")
-        print(user.get(.name))
-        print(user.get(.level))
-        print(user.get(.rank))
-        print(user.get(.rankImg))
-        print(user.get(.levelFrame))
-        print(user.get(.star))
-        print(user.get(.quickWins))
-        print(user.get(.quickLost))
-        print(user.get(.quickPlayed))
-        print(user.get(.quickPlayTime))
-        print(user.get(.competitiveWins))
-        print(user.get(.competitiveLost))
-        print(user.get(.competitivePlayed))
-        print(user.get(.competitivePlaytime))
-        print(user.get(.avatar))
-    }
-    
-    private func printAllHeroes() {
-        print("all heroes")
-        print(allHeroes.get(.cards))
-        print(allHeroes.get(.damagaeDoneAverage))
-        print(allHeroes.get(. damageDone ))
-        print(allHeroes.get(.damageDoneMostInGame ))
-        print(allHeroes.get(.deaths ))
-        print(allHeroes.get(.deathsAverage ))
-        print(allHeroes.get(.defensiveAssistsAverage ))
 
-
-        
-
-    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

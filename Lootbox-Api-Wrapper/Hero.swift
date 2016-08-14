@@ -90,7 +90,6 @@ class Hero: NSObject {
                 completion(success: false, error: error)
             }
             else {
-                
                 if json["error"] != nil {
                     completion(success: false, error: NSError(domain: String(json["error"]), code: -1, userInfo: nil))
                     
