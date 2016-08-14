@@ -15,6 +15,8 @@
 		39559F711D5CACFE00905B02 /* URLUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39559F6E1D5CACFE00905B02 /* URLUtilities.swift */; };
 		39559F761D5CC6B900905B02 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39559F751D5CC6B900905B02 /* User.swift */; };
 		39DB24A31D5CDE3700E40F66 /* URLUtilitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DB24A21D5CDE3700E40F66 /* URLUtilitiesTests.swift */; };
+		39E3BDE01D5FD0D1001B79C3 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E3BDDF1D5FD0D1001B79C3 /* Hero.swift */; };
+		39E3BDE21D5FF186001B79C3 /* ViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E3BDE11D5FF186001B79C3 /* ViewViewController.swift */; };
 		39E739B91D5CEE2D0028CF39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39E739B81D5CEE2D0028CF39 /* Main.storyboard */; };
 		39E739BA1D5CEE2D0028CF39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39E739B81D5CEE2D0028CF39 /* Main.storyboard */; };
 		39E739BC1D5CEEF80028CF39 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E739BB1D5CEEF80028CF39 /* UserTests.swift */; };
@@ -45,6 +47,8 @@
 		39559F6E1D5CACFE00905B02 /* URLUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLUtilities.swift; sourceTree = "<group>"; };
 		39559F751D5CC6B900905B02 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		39DB24A21D5CDE3700E40F66 /* URLUtilitiesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLUtilitiesTests.swift; sourceTree = "<group>"; };
+		39E3BDDF1D5FD0D1001B79C3 /* Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		39E3BDE11D5FF186001B79C3 /* ViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewViewController.swift; sourceTree = "<group>"; };
 		39E739B81D5CEE2D0028CF39 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		39E739BB1D5CEEF80028CF39 /* UserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
 		39E739BD1D5CF0170028CF39 /* JSONUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONUtilities.swift; sourceTree = "<group>"; };
@@ -96,6 +100,7 @@
 				39E739C11D5E7CED0028CF39 /* Classes */,
 				39559F531D5CACA200905B02 /* Assets.xcassets */,
 				39559F741D5CC08700905B02 /* Utilities */,
+				39E3BDE11D5FF186001B79C3 /* ViewViewController.swift */,
 			);
 			path = "Lootbox-Api-Wrapper";
 			sourceTree = "<group>";
@@ -126,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				39E739BF1D5E7CE80028CF39 /* AllHeroes.swift */,
+				39E3BDDF1D5FD0D1001B79C3 /* Hero.swift */,
 				39559F751D5CC6B900905B02 /* User.swift */,
 			);
 			name = Classes;
@@ -236,6 +242,8 @@
 				39559F4D1D5CACA200905B02 /* AppDelegate.swift in Sources */,
 				39559F761D5CC6B900905B02 /* User.swift in Sources */,
 				39E739BE1D5CF0170028CF39 /* JSONUtilities.swift in Sources */,
+				39E3BDE21D5FF186001B79C3 /* ViewViewController.swift in Sources */,
+				39E3BDE01D5FD0D1001B79C3 /* Hero.swift in Sources */,
 				39E739C01D5E7CE80028CF39 /* AllHeroes.swift in Sources */,
 				39559F6F1D5CACFE00905B02 /* Constants.swift in Sources */,
 				39559F701D5CACFE00905B02 /* Extensions.swift in Sources */,

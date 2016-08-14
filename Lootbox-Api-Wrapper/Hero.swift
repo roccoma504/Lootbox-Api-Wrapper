@@ -1,70 +1,60 @@
 //
-//  AllHeroes.swift
+//  Hero.swift
 //  Lootbox-Api-Wrapper
 //
-//  Created by Matthew Rocco on 8/12/16.
+//  Created by Matthew Rocco on 8/13/16.
 //  Copyright © 2016 Matthew Rocco. All rights reserved.
 //
 
 import UIKit
 
-class AllHeroes: NSObject {
+class Hero: NSObject {
     
     private var ID : String
     private var platform : PlatformType
     private var region : RegionType
     private var mode : ModeType
+    private var hero : Heroes
     private var json : [String : AnyObject]!
     
     enum ValueKind : String {
-        case cards = "Cards"
-        case damagaeDoneAverage = "DamageDone-Average"
-        case damageDoe = "DamageDone"
+        case criticalHitAccuracy = "CriticalHitAccuracy"
+        case criticalHits = "CriticalHits"
+        case criticalHitsMostInGame = "CriticalHits-MostinGame"
+        case criticalHitsMostInLife = "CriticalHits-MostinLife"
+        case damageDone = "DamageDone"
+        case damageDoneAverage = "DamageDone-Average"
         case damageDoneMostInGame = "DamageDone-MostinGame"
+        case damageDoneMostInLife = "DamageDone-MostinLife"
         case deaths = "Deaths"
         case deathsAverage = "Deaths-Average"
-        case defensiveAssistsAverage = "DefensiveAssists-Average"
-        case defensiveAssistsMostInGame = "DefensiveAssists-MostinGame"
-        case defensiveAssistsTotal = "DefensiveAssists"
         case eliminations = "Eliminations"
         case eliminationsAverage = "Eliminations-Average"
-        case eliminationsMostInGame = "Eliminations-MostinGame"
-        case environmentalDeaths = "EnvironmentalDeaths"
-        case environmentalKills = "EnvironmentalKill"
+        case elminationsMostInGame = "Eliminations-MostinGame"
+        case elminationsMostInLife = "Eliminations-MostinLife"
+        case elminationsPerLife = "EliminationsperLife"
         case finalBlows = "FinalBlows"
         case finalBlowsAverage = "FinalBlows-Average"
         case finalBlowsMostInGame = "FinalBlows-MostinGame"
-        case healingDone = "HealingDone"
-        case healingDoneAverage = "HealingDone-Average"
-        case healingDoneMostInGame = "HealingDone-MostinGame"
+        case gamesPlayed = "GamesPlayed"
+        case gamesWon = "GamesWon"
+        case killStreakBest = "KillStreak-Best"
         case medalsBronze = "Medals-Bronze"
-        case medalsGold = "Medals-Gold"
         case medalsSilver = "Medals-Silver"
-        case meleeFinalBlows = "MeleeFinalBlows"
-        case meleeFinalBlowsAverage = "MeleeFinalBlows-Average"
-        case meleeFinalBlowsMostInGame = "MeleeFinalBlow-MostinGame"
-        case multikillBest = "Multikill-Best"
-        case multiKills = "Multikills"
-        case obectiveKills = "ObjectiveKills"
-        case objecetiveKillsAverage = "ObjectiveKills-Average"
+        case objectiveKills = "ObjectiveKills"
+        case objectiveKillsAverage = "ObjectiveKills-Average"
         case objectiveKillsMostInGame = "ObjectiveKills-MostinGame"
+        case objectiveTime = "ObjectiveTime"
         case objectiveTimeAverage = "ObjectiveTime-Average"
         case objectiveTimeMostInGame = "ObjectiveTime-MostinGame"
-        case objectiveTive = "ObjectiveTime"
-        case offensiveAssistsAverage = "OffensiveAssists-Average"
-        case offensiveAssistsMostInGame = "OffensiveAssists-MostinGame"
-        case offensiveAssistsTotal = "OffensiveAssists"
-        case played = "GamesPlayed"
-        case reconAssist = "ReconAssists"
         case soloKills = "SoloKills"
-        case solokillsAverage = "SoloKills-Average"
+        case soloKillsAverage = "SoloKills-Average"
         case soloKillsMostInGame = "SoloKills-MostinGame"
         case timePlayed = "TimePlayed"
-        case timeSpentOnFileMostInGame = "TimeSpentonFire-MostinGame"
-        case timeSpentOnFireAverage = "TimeSpentonFire-Average"
+        case totalCards = "Card"
         case totalMedals = "Medals"
-        case totalTimeOnFire = "TimeSpentonFire"
-        case won = "GamesWon"
+        case weaponAccuracy = "WeaponAccuracy"
+        case winPercentage = "WinPercentage"
     }
     
     /**
@@ -85,15 +75,17 @@ class AllHeroes: NSObject {
          platform   : PlatformType,
          region     : RegionType,
          mode       : ModeType,
+         hero       : Heroes,
          completion : (success : Bool, error: NSError?) -> ()) {
         self.ID = ID
         self.platform = platform
         self.region = region
         self.mode = mode
+        self.hero = hero
         
         super.init()
         
-        JSONUtilities.retrieve(URLUtilities.allHeroesURL(ID, platform: platform, region: region, mode: mode)) { (json, error) in
+        JSONUtilities.retrieve(URLUtilities.heroURL(ID, platform: platform, region: region, mode: mode, hero: hero)) { (json, error) in
             if error != nil {
                 completion(success: false, error: error)
             }

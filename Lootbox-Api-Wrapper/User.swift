@@ -49,29 +49,28 @@ class User: NSObject {
      */
     init(ID         : String,
          platform   : PlatformType,
-         region     : RegionType,
-         completion : (success : Bool, error: NSError?) -> ()) {
+         region     : RegionType) {
         self.ID = ID
         self.platform = platform
         self.region = region
-        
-        super.init()
-        
+    }
+    
+    func fetch(completion : (success : Bool, error: NSError?) -> ()) {
         JSONUtilities.retrieve(URLUtilities.profileURL(ID, platform: platform, region: region)) { (json, error) in
             if error != nil {
                 completion(success: false, error: error)
             }
             else {
-                
                 if json["error"] != nil {
                     completion(success: false, error: NSError(domain: String(json["error"]), code: -1, userInfo: nil))
-                
+                    
                 }
                 else {
+                    print(json)
                     self.json = json
                     completion(success: true, error: error)
                 }
-
+                
             }
         }
     }
@@ -87,35 +86,35 @@ class User: NSObject {
     func get(kind : ValueKind) -> String {
         switch kind {
         case .name:
-            return String(json["username"])
+            return json["data"]!["username"] as! String
         case .level:
-            return String(json["level"])
+            return String(json["data"]!["level"] as! Int)
         case .quickWins:
-            return String(json["quick"]!["wins"])
+            return json["data"]!["games"]!!["quick"]!!["wins"] as! String
         case .quickLost:
-            return String(json["quick"]!["lost"])
+            return String(json["data"]!["games"]!!["quick"]!!["lost"] as! Int)
         case .quickPlayed:
-            return String(json["quick"]!["played"])
+            return json["data"]!["games"]!!["quick"]!!["played"] as! String
         case .quickPlayTime:
-            return String(json["playtime"]!["quick"])
+            return json["data"]!["playtime"]!!["quick"] as! String
         case .competitiveWins:
-            return String(json["competitive"]!["wins"])
+            return json["data"]!["games"]!!["competitive"]!!["wins"] as! String
         case .competitiveLost:
-            return String(json["competitive"]!["lost"])
+            return String(json["data"]!["games"]!!["competitive"]!!["lost"] as! Int)
         case .competitivePlayed:
-            return String(json["competitive"]!["played"])
+            return json["data"]!["games"]!!["competitive"]!!["played"] as! String
         case .competitivePlaytime:
-            return String(json["playtime"]!["competitive"])
+            return json["data"]!["playtime"]!!["competitive"] as! String
         case .avatar:
-            return String(json["avatar"])
+            return json["data"]!["avatar"] as! String
         case .rank:
-            return String(json["competitive"]!["rank"])
+            return json["data"]!["competitive"]!!["rank"] as! String
         case .rankImg:
-            return String(json["competitive"]!["rank_img"])
+            return json["data"]!["competitive"]!!["rank_img"] as! String
         case .levelFrame:
-            return String(json["levelFrame"])
+            return json["data"]!["levelFrame"] as! String
         case .star:
-            return String(json["star"])
+            return json["data"]!["star"] as! String
         }
     }
     
