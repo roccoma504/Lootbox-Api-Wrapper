@@ -54,7 +54,7 @@ enum RegionType: String {
 
 /**
  Defines the enumeration of possible heroes
- 
+
  - Ana:
  - Bastion:
  - Dva:

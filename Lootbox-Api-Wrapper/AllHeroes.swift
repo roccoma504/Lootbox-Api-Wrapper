@@ -14,7 +14,7 @@ class AllHeroes: NSObject {
     private var platform: PlatformType
     private var region: RegionType
     private var mode: ModeType
-    private var json: [String : AnyObject]!
+    private var json: [String:AnyObject]!
 
     enum ValueKind: String {
         case Cards = "Cards"
@@ -69,7 +69,7 @@ class AllHeroes: NSObject {
     /**
      Initializes a User class and retrieves the data required. The completion
      block will return an error if the data could not be retrieved.
-     
+
      - parameter ID:         The user ID
      - parameter platform:   The user platform
      - parameter region:     The user region
@@ -84,7 +84,7 @@ class AllHeroes: NSObject {
          platform: PlatformType,
          region: RegionType,
          mode: ModeType,
-         completion : (success: Bool, error: NSError?) -> ()) {
+         completion: (success: Bool, error: NSError?) -> ()) {
         self.ID = ID
         self.platform = platform
         self.region = region
