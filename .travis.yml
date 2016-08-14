@@ -4,5 +4,9 @@ osx_image: xcode7.3
 script:
 - xcodebuild clean build test -project Lootbox-Api-Wrapper.xcodeproj -scheme Lootbox-Api-WrapperTests -destination 'platform=iOS Simulator,name=iPhone 6,OS=9.3' GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
 
+addons:
+    code_climate:
+        repo_token: e5a4a127f518820ec6dcd38ab4684834a7dc185049d1af6d11a2feefb9fa1292
+
 after_success:
 - bash <(curl -s https://codecov.io/bash)

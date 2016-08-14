@@ -11,23 +11,29 @@ import UIKit
 class ViewViewController: UIViewController {
     
     var user : User!
+    var allHeroes : AllHeroes!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("loaded")
         
-        user = User(ID: "roclobster504", platform: .psn, region: .us)
-        
-        user.fetch { (success, error) in
+        user = User(ID: "roclobster504", platform: .psn, region: .us, completion: { (success, error) in
             if success {
                 self.printStuff()
             }
-        }
+        })
+        
+        allHeroes = AllHeroes(ID: "roclobster504", platform: .psn, region: .us, mode: .quick, completion: { (success, error) in
+                if success {
+                    self.printStuff()
+                }
+        })
+        
         
         // Do any additional setup after loading the view.
     }
     
-    private func printStuff() {        
+    private func printStuff() {
         print(user.get(.name))
         print(user.get(.level))
         print(user.get(.rank))

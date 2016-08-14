@@ -49,13 +49,13 @@ class User: NSObject {
      */
     init(ID         : String,
          platform   : PlatformType,
-         region     : RegionType) {
+         region     : RegionType,
+         completion : (success : Bool, error: NSError?) -> ()) {
         self.ID = ID
         self.platform = platform
         self.region = region
-    }
-    
-    func fetch(completion : (success : Bool, error: NSError?) -> ()) {
+        super.init()
+        
         JSONUtilities.retrieve(URLUtilities.profileURL(ID, platform: platform, region: region)) { (json, error) in
             if error != nil {
                 completion(success: false, error: error)
@@ -63,14 +63,13 @@ class User: NSObject {
             else {
                 if json["error"] != nil {
                     completion(success: false, error: NSError(domain: String(json["error"]), code: -1, userInfo: nil))
-                    
+
                 }
                 else {
                     print(json)
                     self.json = json
                     completion(success: true, error: error)
                 }
-                
             }
         }
     }
