@@ -17,54 +17,53 @@ class AllHeroes: NSObject {
     private var json : [String : AnyObject]!
     
     enum ValueKind : String {
-        case cards = "Cards"
-        case damagaeDoneAverage = "DamageDone-Average"
-        case damageDone = "DamageDone"
-        case damageDoneMostInGame = "DamageDone-MostinGame"
-        case deaths = "Deaths"
-        case deathsAverage = "Deaths-Average"
-        case defensiveAssistsAverage = "DefensiveAssists-Average"
-        case defensiveAssistsMostInGame = "DefensiveAssists-MostinGame"
-        case defensiveAssistsTotal = "DefensiveAssists"
-        case eliminations = "Eliminations"
-        case eliminationsAverage = "Eliminations-Average"
-        case eliminationsMostInGame = "Eliminations-MostinGame"
-        case environmentalDeaths = "EnvironmentalDeaths"
-        case environmentalKills = "EnvironmentalKill"
-        case finalBlows = "FinalBlows"
-        case finalBlowsAverage = "FinalBlows-Average"
-        case finalBlowsMostInGame = "FinalBlows-MostinGame"
-        case healingDone = "HealingDone"
-        case healingDoneAverage = "HealingDone-Average"
-        case healingDoneMostInGame = "HealingDone-MostinGame"
-        case medalsBronze = "Medals-Bronze"
-        case medalsGold = "Medals-Gold"
-        case medalsSilver = "Medals-Silver"
-        case meleeFinalBlows = "MeleeFinalBlows"
-        case meleeFinalBlowsAverage = "MeleeFinalBlows-Average"
-        case meleeFinalBlowsMostInGame = "MeleeFinalBlow-MostinGame"
-        case multikillBest = "Multikill-Best"
-        case multiKills = "Multikills"
-        case obectiveKills = "ObjectiveKills"
-        case objecetiveKillsAverage = "ObjectiveKills-Average"
-        case objectiveKillsMostInGame = "ObjectiveKills-MostinGame"
-        case objectiveTimeAverage = "ObjectiveTime-Average"
-        case objectiveTimeMostInGame = "ObjectiveTime-MostinGame"
-        case objectiveTive = "ObjectiveTime"
-        case offensiveAssistsAverage = "OffensiveAssists-Average"
-        case offensiveAssistsMostInGame = "OffensiveAssists-MostinGame"
-        case offensiveAssistsTotal = "OffensiveAssists"
-        case played = "GamesPlayed"
-        case reconAssist = "ReconAssists"
-        case soloKills = "SoloKills"
-        case solokillsAverage = "SoloKills-Average"
-        case soloKillsMostInGame = "SoloKills-MostinGame"
-        case timePlayed = "TimePlayed"
-        case timeSpentOnFileMostInGame = "TimeSpentonFire-MostinGame"
-        case timeSpentOnFireAverage = "TimeSpentonFire-Average"
-        case totalMedals = "Medals"
-        case totalTimeOnFire = "TimeSpentonFire"
-        case won = "GamesWon"
+        case Cards = "Cards"
+        case DamagaeDoneAverage = "DamageDone-Average"
+        case DamageDone = "DamageDone"
+        case DamageDoneMostInGame = "DamageDone-MostinGame"
+        case Deaths = "Deaths"
+        case DeathsAverage = "Deaths-Average"
+        case DefensiveAssistsAverage = "DefensiveAssists-Average"
+        case DefensiveAssistsMostInGame = "DefensiveAssists-MostinGame"
+        case DefensiveAssistsTotal = "DefensiveAssists"
+        case Eliminations = "Eliminations"
+        case EliminationsAverage = "Eliminations-Average"
+        case EliminationsMostInGame = "Eliminations-MostinGame"
+        case EnvironmentalDeaths = "EnvironmentalDeaths"
+        case EnvironmentalKills = "EnvironmentalKill"
+        case FinalBlows = "FinalBlows"
+        case FinalBlowsAverage = "FinalBlows-Average"
+        case FinalBlowsMostInGame = "FinalBlows-MostinGame"
+        case HealingDone = "HealingDone"
+        case HealingDoneAverage = "HealingDone-Average"
+        case HealingDoneMostInGame = "HealingDone-MostinGame"
+        case MedalsBronze = "Medals-Bronze"
+        case MedalsGold = "Medals-Gold"
+        case MedalsSilver = "Medals-Silver"
+        case MeleeFinalBlows = "MeleeFinalBlows"
+        case MeleeFinalBlowsAverage = "MeleeFinalBlows-Average"
+        case MeleeFinalBlowsMostInGame = "MeleeFinalBlow-MostinGame"
+        case MultikillBest = "Multikill-Best"
+        case MultiKills = "Multikills"
+        case ObectiveKills = "ObjectiveKills"
+        case ObjecetiveKillsAverage = "ObjectiveKills-Average"
+        case ObjectiveKillsMostInGame = "ObjectiveKills-MostinGame"
+        case ObjectiveTimeAverage = "ObjectiveTime-Average"
+        case ObjectiveTimeMostInGame = "ObjectiveTime-MostinGame"
+        case ObjectiveTive = "ObjectiveTime"
+        case OffensiveAssistsAverage = "OffensiveAssists-Average"
+        case OffensiveAssistsMostInGame = "OffensiveAssists-MostinGame"
+        case OffensiveAssistsTotal = "OffensiveAssists"
+        case Played = "GamesPlayed"
+        case SoloKills = "SoloKills"
+        case SolokillsAverage = "SoloKills-Average"
+        case SoloKillsMostInGame = "SoloKills-MostinGame"
+        case TimePlayed = "TimePlayed"
+        case TimeSpentOnFileMostInGame = "TimeSpentonFire-MostinGame"
+        case TimeSpentOnFireAverage = "TimeSpentonFire-Average"
+        case TotalMedals = "Medals"
+        case TotalTimeOnFire = "TimeSpentonFire"
+        case Won = "GamesWon"
     }
     
     /**
@@ -98,10 +97,8 @@ class AllHeroes: NSObject {
                 completion(success: false, error: error)
             }
             else {
-                
                 if json["error"] != nil {
                     completion(success: false, error: NSError(domain: String(json["error"]), code: -1, userInfo: nil))
-                    
                 }
                 else {
                     self.json = json
@@ -122,6 +119,5 @@ class AllHeroes: NSObject {
     func get(kind : ValueKind) -> String {
         return String(json[kind.rawValue])
     }
-    
     
 }

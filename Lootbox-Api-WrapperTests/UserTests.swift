@@ -25,9 +25,6 @@ class UserTests: XCTestCase {
     
     func successfulCreate() {
         
-        let ID = "roclobster504"
-        let region : RegionType = .us
-        let platform : PlatformType = .psn
         //let exp = expectationWithDescription("\(#function)\(#line)")
         
         //user = User(ID: ID, platform: platform, region: region) { (success, error) in

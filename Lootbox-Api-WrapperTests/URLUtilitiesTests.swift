@@ -12,8 +12,8 @@ import XCTest
 class URLUtilitiesTest: XCTestCase {
     
     let userID = "roclobster504"
-    let platform : PlatformType = .psn
-    let region : RegionType = .us
+    let platform : PlatformType = .Psn
+    let region : RegionType = .Us
     
     override func setUp() {
         super.setUp()
@@ -39,27 +39,27 @@ class URLUtilitiesTest: XCTestCase {
         var compURL = "https://api.lootbox.eu/psn/us/roclobster504/profile"
         XCTAssertTrue(rURL == compURL)
         
-        rURL = String(URLUtilities.profileURL("Champ26", platform: .xbl, region: region))
+        rURL = String(URLUtilities.profileURL("Champ26", platform: .Xbl, region: region))
         compURL = "https://api.lootbox.eu/xbl/global/Champ26/profile"
         XCTAssertTrue(rURL == compURL)
     }
     
     func allHeroesURL() {
-        var rURL = String(URLUtilities.allHeroesURL(userID, platform: platform, region: region,mode: .competitive))
+        var rURL = String(URLUtilities.allHeroesURL(userID, platform: platform, region: region,mode: .Competitive))
         var compURL = "https://api.lootbox.eu/psn/us/roclobster504/competitive-play/allHeroes"
         XCTAssertTrue(rURL == compURL)
         
-        rURL = String(URLUtilities.allHeroesURL(userID, platform: platform, region: region,mode: .quick))
+        rURL = String(URLUtilities.allHeroesURL(userID, platform: platform, region: region,mode: .Quick))
         compURL = "https://api.lootbox.eu/psn/us/roclobster504/quick-play/allHeroes"
         XCTAssertTrue(rURL == compURL)
     }
     
     func heroURL() {
-        var rURL = String(URLUtilities.heroURL(userID, platform: platform, region: region,mode: .competitive, hero: .Hanzo))
+        var rURL = String(URLUtilities.heroURL(userID, platform: platform, region: region,mode: .Competitive, hero: .Hanzo))
         var compURL = "https://api.lootbox.eu/psn/us/roclobster504/competitive-play/Hanzo"
         XCTAssertTrue(rURL == compURL)
         
-        rURL = String(URLUtilities.heroURL(userID, platform: platform, region: region, mode: .quick, hero: .Hanzo))
+        rURL = String(URLUtilities.heroURL(userID, platform: platform, region: region, mode: .Quick, hero: .Hanzo))
         compURL = "https://api.lootbox.eu/psn/us/roclobster504/quick-play/Hanzo"
         XCTAssertTrue(rURL == compURL)
     }

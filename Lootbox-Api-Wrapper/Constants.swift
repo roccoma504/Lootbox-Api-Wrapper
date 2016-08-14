@@ -9,13 +9,7 @@
 import UIKit
 
 /// Defines the base URL
-let BASE_URL = "https://api.lootbox.eu"
-
-/// Defines the set of heroes broken down by type
-let OFFENSE_HEROES = ["Genji","Mccree","Pharah","Reaper","Soldier 76","Tracer"]
-let DEFENSE_HEROES = ["Bastion","Hanzo","Junkrat","Mei","Torbjorn","Widowmaker"]
-let TANK_HEROES = ["D.Va","Reinhardt","Roadhog","Winston","Zarya"]
-let SUPPORT_HEROES = ["Ana","Lucio","Mercy","Symmetra","Zenyatta"]
+let BaseUrl = "https://api.lootbox.eu"
 
 /**
  Defines the enumeration of possible game types
@@ -23,9 +17,9 @@ let SUPPORT_HEROES = ["Ana","Lucio","Mercy","Symmetra","Zenyatta"]
  - quick:
  - competitive:
  */
-enum ModeType : String {
-    case quick = "quick-play"
-    case competitive = "competitive-play"
+enum ModeType: String {
+    case Quick = "quick-play"
+    case Competitive = "competitive-play"
 }
 
 /**
@@ -35,10 +29,10 @@ enum ModeType : String {
  - xbl: Xbox Live
  - pc: Playstation
  */
-enum PlatformType : String {
-    case psn = "psn"
-    case xbl = "xbl"
-    case pc = "pc"
+enum PlatformType: String {
+    case Psn = "psn"
+    case Xbl = "xbl"
+    case Pc = "pc"
 }
 
 /**
@@ -50,14 +44,13 @@ enum PlatformType : String {
  - cn:     Canada
  - global: Global
  */
-enum RegionType : String {
-    case eu = "eu"
-    case us = "us"
-    case kr = "kr"
-    case cn = "cn"
-    case global = "global"
+enum RegionType: String {
+    case Eu = "eu"
+    case Us = "us"
+    case Kr = "kr"
+    case Cn = "cn"
+    case Global = "global"
 }
-
 
 /**
  Defines the enumeration of possible heroes
@@ -84,7 +77,7 @@ enum RegionType : String {
  - Zenyatta:
  - Zarya:
  */
-enum Heroes : String {
+enum Heroes: String {
     case Ana = "Ana"
     case Bastion = "Bastion"
     case Dva = "Dva"
@@ -107,6 +100,3 @@ enum Heroes : String {
     case Zenyatta = "Zenyatta"
     case Zarya = "Zarya"
 }
-
-
-

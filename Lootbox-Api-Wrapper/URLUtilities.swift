@@ -33,13 +33,13 @@ class URLUtilities {
     static func achievementsURL (userID   : String,
                                  platform : PlatformType,
                                  region   : RegionType) -> NSURL {
-        return NSURL(string :(BASE_URL)+"/"+(platform.rawValue)+"/"+(fixXBL(platform.rawValue, region: region.rawValue))+"/"+(userID.replace("-",with:"-"))+"/achievements")!
+        return NSURL(string :(BaseUrl)+"/"+(platform.rawValue)+"/"+(fixXBL(platform.rawValue, region: region.rawValue))+"/"+(userID.replace("-",with:"-"))+"/achievements")!
     }
     
     static func profileURL(userID   : String,
                            platform : PlatformType,
                            region   : RegionType) -> NSURL {
-        return NSURL(string : (BASE_URL)+"/"+(platform.rawValue)+"/"+(fixXBL(platform.rawValue, region: region.rawValue))+"/"+(userID.replace("-",with:"-"))+"/profile")!
+        return NSURL(string : (BaseUrl)+"/"+(platform.rawValue)+"/"+(fixXBL(platform.rawValue, region: region.rawValue))+"/"+(userID.replace("-",with:"-"))+"/profile")!
     }
     
     static func allHeroesURL(userID   : String,
@@ -51,7 +51,7 @@ class URLUtilities {
         let regionString = region.rawValue
         let platformString = platform.rawValue
         
-        return NSURL(string :(BASE_URL)+"/"+(platformString+"/")+(fixXBL(platformString, region: regionString)+"/")+(userID.replace("-",with:"-")+"/")+(modeString + "/")+"allHeroes")!
+        return NSURL(string :(BaseUrl)+"/"+(platformString+"/")+(fixXBL(platformString, region: regionString)+"/")+(userID.replace("-",with:"-")+"/")+(modeString + "/")+"allHeroes")!
     }
     
     static func heroURL(userID   : String,
@@ -65,13 +65,13 @@ class URLUtilities {
         let platformString = platform.rawValue
         let heroString = hero.rawValue
         
-        return NSURL(string :(BASE_URL)+"/"+(platformString+"/")+(fixXBL(platformString, region: regionString)+"/")+(userID.replace("-",with:"-")+"/")+(modeString + "/")+heroString)!
+        return NSURL(string :(BaseUrl)+"/"+(platformString+"/")+(fixXBL(platformString, region: regionString)+"/")+(userID.replace("-",with:"-")+"/")+(modeString + "/")+heroString)!
     }
     
     static func heroesURL(userID   : String,
                           platform : PlatformType,
                           region   : RegionType) -> NSURL {
-        return NSURL(string :(BASE_URL)+"/"+(platform.rawValue)+"/"+(fixXBL(platform.rawValue, region: region.rawValue))+"/"+(userID.replace("-",with:"-")+"/")+"heroes")!
+        return NSURL(string :(BaseUrl)+"/"+(platform.rawValue)+"/"+(fixXBL(platform.rawValue, region: region.rawValue))+"/"+(userID.replace("-",with:"-")+"/")+"heroes")!
     }
     
 }

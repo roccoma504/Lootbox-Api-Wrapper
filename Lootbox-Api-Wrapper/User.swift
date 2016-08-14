@@ -11,28 +11,27 @@ import UIKit
 class User: NSObject {
     
     enum ValueKind : String {
-        case name
-        case level
-        case rank
-        case rankImg
-        case levelFrame
-        case star
-        case quickWins
-        case quickLost
-        case quickPlayed
-        case quickPlayTime
-        case competitiveWins
-        case competitiveLost
-        case competitivePlayed
-        case competitivePlaytime
-        case avatar
-        
+        case Name
+        case Level
+        case Rank
+        case RankImg
+        case LevelFrame
+        case Star
+        case QuickWins
+        case QuickLost
+        case QuickPlayed
+        case QuickPlayTime
+        case CompetitiveWins
+        case CompetitiveLost
+        case CompetitivePlayed
+        case CompetitivePlaytime
+        case Avatar
     }
     
-    private var ID : String
-    private var platform : PlatformType
-    private var region : RegionType
-    private var json : [String : AnyObject]!
+    private var ID: String
+    private var platform: PlatformType
+    private var region: RegionType
+    private var json: [String : AnyObject]!
     
     /**
      Initializes a User class and retrieves the data required. The completion
@@ -63,7 +62,7 @@ class User: NSObject {
             else {
                 if json["error"] != nil {
                     completion(success: false, error: NSError(domain: String(json["error"]), code: -1, userInfo: nil))
-
+                    
                 }
                 else {
                     print(json)
@@ -84,35 +83,35 @@ class User: NSObject {
      */
     func get(kind : ValueKind) -> String {
         switch kind {
-        case .name:
+        case .Name:
             return json["data"]!["username"] as! String
-        case .level:
+        case .Level:
             return String(json["data"]!["level"] as! Int)
-        case .quickWins:
+        case .QuickWins:
             return json["data"]!["games"]!!["quick"]!!["wins"] as! String
-        case .quickLost:
+        case .QuickLost:
             return String(json["data"]!["games"]!!["quick"]!!["lost"] as! Int)
-        case .quickPlayed:
+        case .QuickPlayed:
             return json["data"]!["games"]!!["quick"]!!["played"] as! String
-        case .quickPlayTime:
+        case .QuickPlayTime:
             return json["data"]!["playtime"]!!["quick"] as! String
-        case .competitiveWins:
+        case .CompetitiveWins:
             return json["data"]!["games"]!!["competitive"]!!["wins"] as! String
-        case .competitiveLost:
+        case .CompetitiveLost:
             return String(json["data"]!["games"]!!["competitive"]!!["lost"] as! Int)
-        case .competitivePlayed:
+        case .CompetitivePlayed:
             return json["data"]!["games"]!!["competitive"]!!["played"] as! String
-        case .competitivePlaytime:
+        case .CompetitivePlaytime:
             return json["data"]!["playtime"]!!["competitive"] as! String
-        case .avatar:
+        case .Avatar:
             return json["data"]!["avatar"] as! String
-        case .rank:
+        case .Rank:
             return json["data"]!["competitive"]!!["rank"] as! String
-        case .rankImg:
+        case .RankImg:
             return json["data"]!["competitive"]!!["rank_img"] as! String
-        case .levelFrame:
+        case .LevelFrame:
             return json["data"]!["levelFrame"] as! String
-        case .star:
+        case .Star:
             return json["data"]!["star"] as! String
         }
     }
