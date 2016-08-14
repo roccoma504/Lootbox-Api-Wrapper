@@ -1,6 +1,6 @@
 # Lootbox-Api-Wrapper For Swift
 
-[![Build Status](https://travis-ci.org/roccoma504/Lootbox-Api-Wrapper.svg?branch=master)](https://travis-ci.org/roccoma504/Lootbox-Api-Wrapper) [![codecov](https://codecov.io/gh/roccoma504/Lootbox-Api-Wrapper/branch/master/graph/badge.svg)](https://codecov.io/gh/roccoma504/Lootbox-Api-Wrapper)
+[![Build Status](https://travis-ci.org/roccoma504/Lootbox-Api-Wrapper.svg?branch=master)](https://travis-ci.org/roccoma504/Lootbox-Api-Wrapper) [![codecov](https://codecov.io/gh/roccoma504/Lootbox-Api-Wrapper/branch/master/graph/badge.svg)](https://codecov.io/gh/roccoma504/Lootbox-Api-Wrapper) [![Code Climate](https://codeclimate.com/github/roccoma504/Lootbox-Api-Wrapper/badges/gpa.svg)](https://codeclimate.com/github/roccoma504/Lootbox-Api-Wrapper)
 
 The Wrapper is built with Swift 2.3 and is a wrapper for the Lootbox API found here [lootbox]. The API provides users with data corresponding to HeroWatch stats. This Wrapper is no way affliated with Blizzard.
 
