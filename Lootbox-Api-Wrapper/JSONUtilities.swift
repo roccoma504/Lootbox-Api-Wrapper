@@ -15,7 +15,7 @@ class JSONUtilities {
      - url - URL where we want to download the image
      */
     private static func getDataFromUrl(url:NSURL,
-                                completion: ((data: NSData?, response: NSURLResponse?, error: NSError? ) -> Void)) {
+                                       completion: ((data: NSData?, response: NSURLResponse?, error: NSError? ) -> Void)) {
         NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) in
             completion(data: data, response: response, error: error)
             }.resume()
@@ -26,26 +26,23 @@ class JSONUtilities {
      - Parameters:
      - url - URL where we want to download the image
      */
-    static func downloadImage(url : NSURL, completion: (image : UIImage, error: NSError?) -> Void) -> () {
+    static func downloadImage(url: NSURL, completion: (image: UIImage, error: NSError?) -> Void) -> () {
         getDataFromUrl(url) { (data, response, error)  in
             guard let data = data where error == nil else {
                 return }
             completion(image: UIImage(data: data)!, error: error)
         }
     }
-
     
-    static func retrieve(url : NSURL, completion: (json: [String : AnyObject]!, error: NSError?) -> ()){
-        var retrievedData : [String : AnyObject]!
+    static func retrieve(url: NSURL, completion: (json: [String : AnyObject]!, error: NSError?) -> ()){
+        var retrievedData: [String : AnyObject]!
         
         let request = NSMutableURLRequest(URL: url)
         let session = NSURLSession.sharedSession()
         let task = session.dataTaskWithRequest(request) { data, response, error in
-        
             if error != nil {
                 let error = NSError(domain: "Failed to retrieve data. Please check your connection.", code: 400, userInfo: nil)
                 completion(json: retrievedData, error: error);
-
             }
             else {
                 do {
@@ -64,4 +61,5 @@ class JSONUtilities {
         }
         task.resume()
     }
+    
 }

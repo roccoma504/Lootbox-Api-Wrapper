@@ -9,8 +9,8 @@
 import UIKit
 
 class User: NSObject {
-    
-    enum ValueKind : String {
+
+    enum ValueKind: String {
         case Name
         case Level
         case Rank
@@ -46,15 +46,15 @@ class User: NSObject {
      - returns: Success : Denotes if the call was successful
      error : NSError returning an error condition, if any.
      */
-    init(ID         : String,
-         platform   : PlatformType,
-         region     : RegionType,
-         completion : (success : Bool, error: NSError?) -> ()) {
+    init(ID: String,
+         platform: PlatformType,
+         region: RegionType,
+         completion: (success: Bool, error: NSError?) -> ()) {
         self.ID = ID
         self.platform = platform
         self.region = region
         super.init()
-        
+
         JSONUtilities.retrieve(URLUtilities.profileURL(ID, platform: platform, region: region)) { (json, error) in
             if error != nil {
                 completion(success: false, error: error)
@@ -62,17 +62,15 @@ class User: NSObject {
             else {
                 if json["error"] != nil {
                     completion(success: false, error: NSError(domain: String(json["error"]), code: -1, userInfo: nil))
-                    
                 }
                 else {
-                    print(json)
                     self.json = json
                     completion(success: true, error: error)
                 }
             }
         }
     }
-    
+
     /**
      Returns the specifified value.
      

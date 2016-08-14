@@ -9,15 +9,15 @@
 import UIKit
 
 class Hero: NSObject {
-    
-    private var ID : String
-    private var platform : PlatformType
-    private var region : RegionType
-    private var mode : ModeType
-    private var hero : Heroes
-    private var json : [String : AnyObject]!
-    
-    enum ValueKind : String {
+
+    private var ID: String
+    private var platform: PlatformType
+    private var region: RegionType
+    private var mode: ModeType
+    private var hero: Heroes
+    private var json: [String : AnyObject]!
+
+    enum ValueKind: String {
         case CriticalHitAccuracy = "CriticalHitAccuracy"
         case CriticalHits = "CriticalHits"
         case CriticalHitsMostInGame = "CriticalHits-MostinGame"
@@ -72,18 +72,18 @@ class Hero: NSObject {
      - returns: Success : Denotes if the call was successful
      error : NSError returning an error condition, if any.
      */
-    init(ID         : String,
-         platform   : PlatformType,
-         region     : RegionType,
-         mode       : ModeType,
-         hero       : Heroes,
-         completion : (success : Bool, error: NSError?) -> ()) {
+    init(ID: String,
+         platform: PlatformType,
+         region: RegionType,
+         mode: ModeType,
+         hero: Heroes,
+         completion: (success: Bool, error: NSError?) -> ()) {
         self.ID = ID
         self.platform = platform
         self.region = region
         self.mode = mode
         self.hero = hero
-        
+
         super.init()
         
         JSONUtilities.retrieve(URLUtilities.heroURL(ID, platform: platform, region: region, mode: mode, hero: hero)) { (json, error) in
@@ -93,7 +93,6 @@ class Hero: NSObject {
             else {
                 if json["error"] != nil {
                     completion(success: false, error: NSError(domain: String(json["error"]), code: -1, userInfo: nil))
-                    
                 }
                 else {
                     self.json = json
@@ -102,7 +101,7 @@ class Hero: NSObject {
             }
         }
     }
-    
+
     /**
      Returns the specifified value.
      
@@ -111,8 +110,8 @@ class Hero: NSObject {
      - returns: A String representing the value in the JSON specified by
      the input parameter
      */
-    func get(kind : ValueKind) -> String {
+    func get(kind: ValueKind) -> String {
         return String(json[kind.rawValue])
     }
-    
+
 }

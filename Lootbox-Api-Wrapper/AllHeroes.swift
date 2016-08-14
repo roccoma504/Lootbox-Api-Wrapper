@@ -9,14 +9,14 @@
 import UIKit
 
 class AllHeroes: NSObject {
-    
-    private var ID : String
-    private var platform : PlatformType
-    private var region : RegionType
-    private var mode : ModeType
-    private var json : [String : AnyObject]!
-    
-    enum ValueKind : String {
+
+    private var ID: String
+    private var platform: PlatformType
+    private var region: RegionType
+    private var mode: ModeType
+    private var json: [String : AnyObject]!
+
+    enum ValueKind: String {
         case Cards = "Cards"
         case DamagaeDoneAverage = "DamageDone-Average"
         case DamageDone = "DamageDone"
@@ -65,7 +65,7 @@ class AllHeroes: NSObject {
         case TotalTimeOnFire = "TimeSpentonFire"
         case Won = "GamesWon"
     }
-    
+
     /**
      Initializes a User class and retrieves the data required. The completion
      block will return an error if the data could not be retrieved.
@@ -76,22 +76,22 @@ class AllHeroes: NSObject {
      - parameter mode:       The mode, quick or competitive
      - parameter completion: The completion block, will return error on
      failure
-     
+
      - returns: Success : Denotes if the call was successful
      error : NSError returning an error condition, if any.
      */
-    init(ID         : String,
-         platform   : PlatformType,
-         region     : RegionType,
-         mode       : ModeType,
-         completion : (success : Bool, error: NSError?) -> ()) {
+    init(ID: String,
+         platform: PlatformType,
+         region: RegionType,
+         mode: ModeType,
+         completion : (success: Bool, error: NSError?) -> ()) {
         self.ID = ID
         self.platform = platform
         self.region = region
         self.mode = mode
-        
+
         super.init()
-        
+
         JSONUtilities.retrieve(URLUtilities.allHeroesURL(ID, platform: platform, region: region, mode: mode)) { (json, error) in
             if error != nil {
                 completion(success: false, error: error)
@@ -107,17 +107,17 @@ class AllHeroes: NSObject {
             }
         }
     }
-    
+
     /**
      Returns the specifified value.
-     
+
      - parameter kind: Possible value kinds
-     
+
      - returns: A String representing the value in the JSON specified by
      the input parameter
      */
-    func get(kind : ValueKind) -> String {
+    func get(kind: ValueKind) -> String {
         return String(json[kind.rawValue])
     }
-    
+
 }

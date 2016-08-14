@@ -9,6 +9,7 @@
 import Foundation
 
 extension String {
+    
     /**
      Private function to replace strings
      
@@ -17,14 +18,14 @@ extension String {
      
      - returns: the source string replaced with the replacement
      */
-    private func replace(string:String, replacement:String) -> String {
+    private func replace(string: String, replacement: String) -> String {
         return self.stringByReplacingOccurrencesOfString(string, withString: replacement, options: NSStringCompareOptions.LiteralSearch, range: nil)
     }
     
-    func replace(value : String, with : String = "") -> String {
+    func replace(value: String, with: String = "") -> String {
         return self.replace(value, replacement: with)
     }
-
+    
     /**
      Inserts a string into an already established string
      
@@ -33,7 +34,7 @@ extension String {
      
      - returns: The string with the input string added at the index
      */
-    private func insert(string:String,ind:Int) -> String {
+    private func insert(string: String, ind: Int) -> String {
         return  String(self.characters.prefix(ind)) + string + String(self.characters.suffix(self.characters.count-ind))
     }
     
@@ -62,9 +63,9 @@ extension String {
             else if stringLength >= 4 && stringLength < 7 {
                 newString = newString.insert(comma, ind: self.characters.count - 3)
             }
-            
         }
         magnitude()
         return newString
     }
+    
 }
