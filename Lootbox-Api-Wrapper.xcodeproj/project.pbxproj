@@ -112,10 +112,10 @@
 		39559F601D5CACA200905B02 /* Lootbox-Api-WrapperTests */ = {
 			isa = PBXGroup;
 			children = (
+				39559F631D5CACA200905B02 /* Info.plist */,
 				39E3BDEB1D610E99001B79C3 /* AllHeroesTests.swift */,
 				39559F611D5CACA200905B02 /* ExtensionsTests.swift */,
 				39E3BDE91D6109DA001B79C3 /* HeroTests.swift */,
-				39559F631D5CACA200905B02 /* Info.plist */,
 				39DB24A21D5CDE3700E40F66 /* URLUtilitiesTests.swift */,
 				39E3BDE71D6109BE001B79C3 /* UserTests.swift */,
 			);

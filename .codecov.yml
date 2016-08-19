@@ -1,0 +1,3 @@
+  ignore: # files and folders for processing
+    - ViewViewController.swift
+    - AppDelegate.swift
